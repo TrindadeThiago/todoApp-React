@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.jsx',
     output: {
         path: __dirname + '/public',
-        filename: './app.jss'
+        filename: './app.js'
     },
     devServer: {
         port: 8080,
@@ -14,7 +14,7 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx'],
         alias: {
-            modules: __dirname + '/node_moduless'
+            modules: __dirname + '/node_modules'
         }
     },
     plugins: [
@@ -24,9 +24,9 @@ module.exports = {
         loaders: [{
             test: /.js[x]?$/,
             loader: 'babel-loader',
-            exclude: /node_moduless/,
+            exclude: /node_modules/,
             query: {
-                preset: ['es2015', 'react'],
+                presets: ['es2015', 'react'],
                 plugins: ['transform-object-rest-spread']
             }
         }, {
